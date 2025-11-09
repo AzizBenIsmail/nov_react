@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Narvbar from './composant/Narvbar';
+import Footer from './composant/Footer';
 function App() {
   return (
+    <div>
+      <Narvbar/>    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+    <Footer/>
     </div>
   );
 }
