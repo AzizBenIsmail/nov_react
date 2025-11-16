@@ -5,13 +5,20 @@ import Carousel from './composant/Carousel';
 import reportWebVitals from './reportWebVitals';
 import Narvbar from './composant/Narvbar';
 import Footer from './composant/Footer';
-
+import App from './App'
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Narvbar/>
-    <Carousel />
-    <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <App/> } />
+        <Route path='/carousel' element={ <Carousel/> } />
+        <Route path='/navbar' element={ <Narvbar/> } />
+        <Route path='/footer' element={ <Footer/> } />
+        <Route path='/*' element={ <App/> } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
